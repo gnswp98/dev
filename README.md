@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-# dev
+# 🌐 Government Information Hub  
+필요한 정보를 한눈에!  
+정부24 로그인, 민원 접수, 고객센터 정보를 손쉽게 이용하세요. 🚀  
 
-## Project setup
-```
-npm install
-```
+📌 **주요 기능**  
+- 🔒 정부24 로그인 바로가기  
+- 📝 민원 접수 간소화  
+- 📞 고객센터 정보 제공  
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
-# dev
->>>>>>> fdf563af4a8d5d86f079cd3dcfc0fe62ec9a0d4a
+더 나은 편의를 위해 꾸준히 업데이트 중입니다. 💡  
