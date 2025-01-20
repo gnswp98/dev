@@ -79,7 +79,6 @@ export default {
   },
 };
 </script>
-
 <style>
 /* Main Container */
 .app-container {
@@ -92,15 +91,29 @@ export default {
 
 /* Menu Button */
 .menu-button {
-  display: none;
+  display: none; /* 기본적으로 숨김 (작은 화면에서만 보이게 설정) */
   position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 12;
+  top: 20px; /* 버튼을 상단으로 약간 띄움 */
+  left: 20px; /* 버튼을 왼쪽으로 약간 띄움 */
+  z-index: 15; /* 사이드바 위로 버튼을 표시 */
   font-size: 24px;
-  background: none;
-  border: none;
+  background: #ffffff; /* 버튼 배경을 흰색으로 설정 */
+  border: 1px solid #ccc; /* 경계선 추가 */
+  border-radius: 4px; /* 둥근 모서리 */
+  padding: 5px 10px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover 및 클릭 효과 */
+.menu-button:hover {
+  background: #f0f0f0; /* 버튼 배경색 변경 */
+  transform: scale(1.05); /* 버튼 크기 확대 */
+}
+
+.menu-button:active {
+  background: #e0e0e0; /* 클릭 시 배경 변경 */
+  transform: scale(0.95); /* 클릭 시 살짝 축소 */
 }
 
 /* Sidebar Overlay */
@@ -126,6 +139,7 @@ export default {
   height: 100%;
   transition: transform 0.3s ease, left 0.3s ease;
 }
+
 .sidebar-visible {
   left: 0; /* Slide in the sidebar */
 }
@@ -137,18 +151,23 @@ export default {
   margin-left: 200px; /* Reserve space for the sidebar */
   transition: margin-left 0.3s ease;
 }
+
+/* 작은 화면 대응 */
 @media (max-width: 768px) {
   .menu-button {
-    display: block;
+    display: block; /* 작은 화면에서만 메뉴 버튼 표시 */
   }
+
   .content {
-    margin-left: 0; /* Remove reserved space for sidebar */
+    margin-left: 0; /* 작은 화면에서는 사이드바 공간 제거 */
   }
+
   .sidebar {
-    left: -200px; /* Ensure it's hidden on small screens */
+    left: -200px; /* 작은 화면에서 사이드바 숨김 */
   }
+
   .sidebar-visible {
-    left: 0; /* Slide in on small screens */
+    left: 0; /* 작은 화면에서 사이드바 표시 */
   }
 }
 </style>

@@ -32,7 +32,8 @@ export default {
   	// api 불러오기
     loadScript() {
       const script = document.createElement("script");
-      script.src ="//dapi.kakao.com/v2/maps/sdk.js?appkey=c99741ef7d6f07efca420fc69c94b440&autoload=false";
+      const appkey = import.meta.env.VUE_APP_KAKAO_MAP_KEY;
+      script.src ="//dapi.kakao.com/v2/maps/sdk.js?appkey="+ appkey +"&autoload=false";
       script.onload = () => window.kakao.maps.load(this.loadMap); 
 
       document.head.appendChild(script);
